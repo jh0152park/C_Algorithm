@@ -7,26 +7,32 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    
-    for(int i = 0; i < 10; i++) {
-        printf("%d ",array[i]);
-    }
-    printf("\n\n");
-    
-    int array2[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-    
-    for(int i = 0; i < 3; i++) {
-        for(int j = 0; j < 3; j++) {
-            printf("%d ", array2[i][j]);
+#define SIZE 10
+
+void print_array(int array[][SIZE]) {
+    for(int i = 0; i < SIZE; i++) {
+        for(int j = 0 ; j < SIZE; j++) {
+            printf("%d ", array[i][j]);
         }
         printf("\n");
     }
+}
+
+int main(int argc, const char * argv[]) {
+    int array[SIZE][SIZE] = {
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+    };
+    
+    print_array(array);
     
     return 0;
 }
