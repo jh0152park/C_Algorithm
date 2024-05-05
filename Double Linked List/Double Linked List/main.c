@@ -45,6 +45,18 @@ node *insert_front(int key, node *t) {
     return new;
 }
 
+int delete_node(node *t) {
+    if(t == head || t == tail) {
+        return 0;
+    }
+    
+    t->prev->next = t->next;
+    t->next->prev = t->prev;
+    free(t);
+    
+    return 1;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
