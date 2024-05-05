@@ -67,6 +67,18 @@ node *find_node(int k) {
     return s;
 }
 
+int delete_node(int k) {
+    node *s;
+    s = find_node(k);
+
+    if(s != tail) {
+        s->prev->next = s->next;
+        s->next->prev = s->prev;
+        return 1;
+    }
+    return 0;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
