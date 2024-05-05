@@ -45,7 +45,7 @@ node *insert_front(int key, node *t) {
     return new;
 }
 
-int delete_node(node *t) {
+int delete_node_ptr(node *t) {
     if(t == head || t == tail) {
         return 0;
     }
@@ -55,6 +55,16 @@ int delete_node(node *t) {
     free(t);
     
     return 1;
+}
+
+node *find_node(int k) {
+    node *s;
+    s = head->next;
+    
+    while(s->key != k && s != tail) {
+        s = s->next;
+    }
+    return s;
 }
 
 int main(int argc, const char * argv[]) {
