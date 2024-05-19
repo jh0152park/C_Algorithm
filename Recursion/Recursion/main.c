@@ -7,8 +7,12 @@
 
 #include <stdio.h>
 
+int fact(int num) {
+    if(num == 1)    return 1;
+    return num * fact(num - 1);
+}
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    printf("%d\n", fact(5));
     return 0;
 }
