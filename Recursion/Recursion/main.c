@@ -20,6 +20,7 @@ int fibo(int num) {
         return fibo(num - 1) + fibo(num - 2);
 }
 
+
 void move_disk(int from, int to) {
     printf("Move disk from %d pillar to %d pillar\n", from, to);
 }
@@ -38,4 +39,3 @@ int main(int argc, const char * argv[]) {
     hanoi(3, 1, 2, 3);
     return 0;
 }
-
