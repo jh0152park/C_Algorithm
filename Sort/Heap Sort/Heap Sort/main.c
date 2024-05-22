@@ -62,6 +62,20 @@ void heap_sort(int a[], int n) {
         a[i] = extract(a, &hn);
 }
 
+void heap_sort2(int a[], int n) {
+    int k, t;
+    
+    for(k = n/2; k >= 1; k--)
+        downheap(a, n, k);
+    
+    while(n > 1) {
+        t = a[1];
+        a[1] = a[n];
+        a[n] = t;
+        downheap(a, --n, 1);
+    }
+}
+
 void print_heap(int a[], int n) {
     int cnt = 0;
     int goal = 1;
@@ -82,12 +96,13 @@ void print_heap(int a[], int n) {
             level--;
         }
     }
-    printf("\n");
+    printf("\n\n");
 }
 
 int main(int argc, const char * argv[]) {
     int node = 0;
     int heap[HEAP_SIZE];
+    int heap2[11] = {INT_MAX, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     
     for(int i = 1; i <= 10; i++) {
         insert(heap, &node, i);
@@ -96,5 +111,10 @@ int main(int argc, const char * argv[]) {
     print_heap(heap, node);
     heap_sort(heap, node);
     print_heap(heap, node);
+    
+    print_heap(heap2, 10);
+    heap_sort2(heap2, 10);
+    print_heap(heap2, 10);
+    
     return 0;
 }
