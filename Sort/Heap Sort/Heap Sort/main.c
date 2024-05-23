@@ -115,8 +115,10 @@ int main(int argc, const char * argv[]) {
         insert(heap, &node, i);
     }
     
+    printf("Insert data into heap from 1 to 10\n");
     print_heap(heap, node);
     heap_sort(heap, node);
+    printf("After sorting\n");
     print_heap(heap, node);
     
     printf("Before sorting\n");
