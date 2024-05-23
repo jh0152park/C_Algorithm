@@ -99,6 +99,13 @@ void print_heap(int a[], int n) {
     printf("\n\n");
 }
 
+void print_array(int a[], int n) {
+    for(int i = 1; i <= n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+
 int main(int argc, const char * argv[]) {
     int node = 0;
     int heap[HEAP_SIZE];
@@ -112,9 +119,11 @@ int main(int argc, const char * argv[]) {
     heap_sort(heap, node);
     print_heap(heap, node);
     
-    print_heap(heap2, 10);
+    printf("Before sorting\n");
+    print_array(heap2, 10);
     heap_sort2(heap2, 10);
-    print_heap(heap2, 10);
+    printf("After sorting\n");
+    print_array(heap2, 10);
     
     return 0;
 }
