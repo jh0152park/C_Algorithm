@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     printf("Before select sort\n");
     for(int i = 0; i < length; i++) {
         array[i] = (int)str[i];
-        printf("%d ", array[i]);
+        printf("%c ", array[i]);
     }
     printf("\n\n");
     
@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     
     printf("After select sort\n");
     for(int i = 0; i < length; i++) {
-        printf("%d ", array[i]);
+        printf("%c ", array[i]);
     }
     printf("\n");
     
