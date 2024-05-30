@@ -9,11 +9,22 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+void print_array(int a[], int n) {
+    printf("=> ");
+    for(int i = 0; i < n; i++) {
+        printf("%c ", a[i]);
+    }
+    printf("\n");
+}
+
+
 void select_sort(int a[], int n) {
     int min;
     int min_index;
     
     for(int i = 0; i < n - 1; i++) {
+        print_array(a, n);
         min = a[i];
         min_index = i;
         for(int j = i + 1; j < n; j++) {
@@ -40,15 +51,13 @@ int main(int argc, const char * argv[]) {
         array[i] = (int)str[i];
         printf("%c ", array[i]);
     }
-    printf("\n\n");
     
+    printf("\n\nSort start !!\n");
     select_sort(array, length);
     
-    printf("After select sort\n");
-    for(int i = 0; i < length; i++) {
-        printf("%c ", array[i]);
-    }
-    printf("\n");
+    printf("\nAfter select sort\n");
+    print_array(array, length);
+
     
     return 0;
 }
