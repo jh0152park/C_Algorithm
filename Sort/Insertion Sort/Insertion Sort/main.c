@@ -3,7 +3,7 @@
 //  Insertion Sort
 //
 //  Created by 박재현 on 2024/05/31.
-//
+//  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 #include <stdio.h>
 #include <stdlib.h>
