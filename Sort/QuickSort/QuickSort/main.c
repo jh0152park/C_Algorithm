@@ -12,7 +12,7 @@
 
 void print_array(int array[], int length) {
     for(int i = 0; i < length; i++) {
-        printf("%c ", array[i]);
+        printf("%d ", array[i]);
     }
     printf("\n\n");
 }
@@ -68,6 +68,6 @@ int main(int argc, const char * argv[]) {
     quick_sort(array, length);
     printf("After quick sorting.\n");
     print_array(array, length);
-    
+
     return 0;
 }
