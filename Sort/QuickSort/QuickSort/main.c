@@ -12,7 +12,7 @@
 
 void print_array(int array[], int length) {
     for(int i = 0; i < length; i++) {
-        printf("%d ", array[i]);
+        printf("%c ", array[i]);
     }
     printf("\n\n");
 }
@@ -32,6 +32,7 @@ void quick_sort(int array[], int length) {
         while(1) {
             while(array[++i] < pivot);
             while(array[--j] > pivot);
+            
             
             if(i >= j)  break;  // i와 j의 위치가 겹치거나 뒤바뀌면 분할 종료
             
@@ -68,6 +69,6 @@ int main(int argc, const char * argv[]) {
     quick_sort(array, length);
     printf("After quick sorting.\n");
     print_array(array, length);
-
+    
     return 0;
 }
